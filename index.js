@@ -1,7 +1,8 @@
 const express = require('express'),
   path = require('path'),
   { info: infoLog, error: errorLog } = require('debugjs-wrapper').all('parser_index'),
-  { process, getMetadata, FRAMES } = require('./process')
+  { process, getMetadata, FRAMES } = require('./process'),
+  PORT = process.env.PORT || 3000
 
 const app = express()
 
@@ -50,6 +51,6 @@ app.post('/', (req, res) => {
   res.render('started')
 })
 
-app.listen(3000, () => {
-  infoLog('Server is running at localhost:3000')
+app.listen(PORT, () => {
+  infoLog(`Server is running at localhost:${PORT}`)
 })
