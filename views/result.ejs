@@ -1,0 +1,25 @@
+<style>
+  .result {
+    text-align: center;
+  }
+</style>
+
+<header>
+  <%- include('./header'); %>
+</header>
+
+<div class="result">
+  <div class="images">
+    <% for (let i = 0; i < FRAMES; i++) { %>
+      <img src="frames/video_<%= i+1 %>.jpg" />
+    <% } %>
+  </div>
+  <div>
+    Metadata: <br />
+      <% for (const key in metadata) { %>
+          <strong><%= key %>:</strong>
+          <%= JSON.stringify(metadata[key]) %>
+          <br />
+      <% } %>
+  </div>
+</div>
