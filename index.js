@@ -1,7 +1,7 @@
 const express = require('express'),
   path = require('path'),
   { info: infoLog, error: errorLog } = require('debugjs-wrapper').all('parser_index'),
-  { process, getMetadata, FRAMES } = require('./process'),
+  { processVideo, getMetadata, FRAMES } = require('./process'),
   PORT = process.env.PORT || 3000
 
 const app = express()

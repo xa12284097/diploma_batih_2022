@@ -128,7 +128,7 @@ const processAsync = async url => {
   await extract()
 }
 
-const process = url => {
+const processVideo = url => {
   if (status === STATUSES.IN_PROGRESS) {
     throw new Error('Already in progress')
   }
@@ -150,7 +150,7 @@ const process = url => {
 }
 
 module.exports = {
-  process,
+  processVideo,
   getMetadata,
   FRAMES
 }
