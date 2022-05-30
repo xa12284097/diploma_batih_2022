@@ -41,7 +41,7 @@ app.post('/', (req, res) => {
   }
 
   try {
-    process(url)
+    processVideo(url)
   } catch (err) {
     errorLog('Failed processing', err)
     res.status(500).render('error', { error: err.message })
